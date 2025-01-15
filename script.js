@@ -31,7 +31,10 @@ function listen() {
     const squareDivs = document.querySelectorAll("div.square");
 
     function addColor(e) {
-        e.target.style.backgroundColor = "yellow";
+        const red = Math.random() * 255;
+        const green = Math.random() * 255;
+        const blue = Math.random() * 255;
+        e.target.style.backgroundColor = `rgb(${red}, ${green}, ${blue})`;
     }
 
     squareDivs.forEach(div => {
